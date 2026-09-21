@@ -8,7 +8,9 @@ Route::get('/', function () {
 });
 
 //Produtos
-Route::get('/produtos', [ProdutoController::class, 'index']);
+Route::get('/produtos', [ProdutoController::class, 'index']); //mostra todos os produtos
+Route::get('/produtos/create', [ProdutoController::class, 'create']); //cria produto
+
 Route::post('/produtos', [ProdutoController::class, 'store']);
 Route::put('/produtos/{produto}', [ProdutoController::class, 'update']);
 Route::delete('/produtos/{produto}', [ProdutoController::class, 'destroy']);
