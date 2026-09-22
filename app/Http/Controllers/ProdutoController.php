@@ -36,6 +36,7 @@ class ProdutoController extends Controller
         $produtos->preco = $request->input('preco');
         $produtos->descricao = $request->input('descricao');
         $produtos->save();
+        return redirect('/produtos');
     }
 
     /**
