@@ -4,9 +4,7 @@
     <p> Sem produtos cadastrados</p>
 @else
     @foreach ( $produtos as $produto)
-        <p>Nome: {{ $produto->nome }}</p>
-        <p>Descrição: {{ $produto->descricao }}</p>
-        <p>Preço: {{ $produto->preco }}</p>
-        <p>Quantidade: {{ $produto->quantidade }}</p>
-    @endforeach
+    <a href="/produtos/{{ $produto->id }}">{{ $produto->nome }}</a><br>
+    <p>{{ $produto->descricao }}</p>
+    @endforeach   
 @endforelse

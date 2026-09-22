@@ -43,7 +43,7 @@ class ProdutoController extends Controller
      */
     public function show(Produto $produto)
     {
-        //
+        return view('produtos.show', compact('produto'));
     }
 
     /**
@@ -59,7 +59,12 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, Produto $produto)
     {
-        //
+        $produto_id = $request->input('produto_id');
+        $produto = Produto::find($produto_id);
+        $produto->nome = $request->input('nome');
+        $produto->quantidade = $request->input('quantidade');
+        $produto->preco = $request->input('preco');
+        $produto->descricao = $request->input('descricao');
     }
 
     /**
