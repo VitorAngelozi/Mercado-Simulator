@@ -13,6 +13,6 @@
      <input type="text" name="quantidade"  
     placeholder="Quantidade do Produto"><br>
     
-    <button type="submite"> Cadastrar</button>
+    <button type="submit"> Cadastrar</button>
 
 </form>
