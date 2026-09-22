@@ -9,3 +9,4 @@
         <p>Quantidade: {{ $produto->quantidade }}</p>
     }
 }
+@endif
