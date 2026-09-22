@@ -7,8 +7,11 @@
     <input type="text" name="descricao"  
     placeholder="Descrição do Produto"><br>
 
-    <input type="text" name="valor"  
+    <input type="text" name="preco"  
     placeholder="Valor do Produto"><br>
+
+     <input type="text" name="quantidade"  
+    placeholder="Quantidade do Produto"><br>
     
     <button type="submite"> Cadastrar</button>
 

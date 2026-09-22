@@ -21,8 +21,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        $produtos = Produto::all();
-        return view('produtos.create', compact('produtos'));
+        return view('produtos.create');
         
     }
 
@@ -31,7 +30,12 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produtos = new Produto();
+        $produtos->nome = $request->input('nome');
+        $produtos->quantidade = $request->input('quantidade');
+        $produtos->preco = $request->input('preco');
+        $produtos->descricao = $request->input('descricao');
+        $produtos->save();
     }
 
     /**
