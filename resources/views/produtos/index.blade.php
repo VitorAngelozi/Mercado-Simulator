@@ -5,7 +5,8 @@
 @else
     @foreach ( $produtos as $produto)
     <a href="/produtos/{{ $produto->id }}">{{ $produto->nome }}</a>
-    <p>{{ $produto->descricao }}</p><br>
+    <p>{{ $produto->descricao }}</p>
+    <hr>
     @endforeach   
 @endforelse
  <a href="/produtos/create"> Criar Produto </a>
