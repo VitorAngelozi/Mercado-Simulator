@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->text('descricao');
-            $table->decimal('preco', 8, 2);
+            $table->float('preco', 8, 2);
             $table->integer('quantidade')->default(0);
             $table->timestamps();
         });
