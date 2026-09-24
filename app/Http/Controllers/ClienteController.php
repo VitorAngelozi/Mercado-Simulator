@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use Illuminate\Support\Facades\Hash;
 
 class ClienteController extends Controller
 {
@@ -36,7 +37,7 @@ class ClienteController extends Controller
         $cliente->senha = Hash::make($request->input('senha'));
         $cliente->cpf = $request->input('cpf');
         $cliente->save();
-        return redirect('/');
+        return redirect('/clientes');
     }
 
     /**
