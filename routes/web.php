@@ -14,6 +14,7 @@ Route::post('/produtos', [ProdutoController::class, 'store']); //cria o produto
 Route::delete('/produtos/{produto}', [ProdutoController::class, 'destroy']);//deleta produto especifico
 
 //Clientes
-Route::get('/', [ClienteController::class, 'index']); //mostra todos os clientes
+Route::get('/clientes', [ClienteController::class, 'index']); //mostra todos os clientes
 Route::get('/clientes/create', [ClienteController::class, 'create']); //rota para criar o cliente
+Route::post('clientes/create', [ClienteController::class, 'store']); //cria o cliente
 Route::get('/clientes/{cliente}', [ClienteController::class, 'show']); //mostra cliente especifico

@@ -22,7 +22,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        
+        return view('clientes.create');
     }
 
     /**
@@ -30,7 +30,13 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cliente = new Cliente();
+        $cliente->nome = $request->input('nome');
+        $cliente->email = $request->input('email');
+        $cliente->senha = $request->input('senha');
+        $cliente->cpf = $request->input('cpf');
+        $cliente->save();
+        return redirect('/');
     }
 
     /**
