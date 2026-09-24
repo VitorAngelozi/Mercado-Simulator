@@ -33,7 +33,7 @@ class ClienteController extends Controller
         $cliente = new Cliente();
         $cliente->nome = $request->input('nome');
         $cliente->email = $request->input('email');
-        $cliente->senha = $request->input('senha');
+        $cliente->senha = Hash::make($request->input('senha'));
         $cliente->cpf = $request->input('cpf');
         $cliente->save();
         return redirect('/');
