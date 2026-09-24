@@ -6,6 +6,9 @@
     
     <label for="email">Email:</label>
     <input type="email" name="email" id="email" required>
+
+    <label for="senha"> Senha: </label>
+    <input type="password" name="senha" id="senha" required>
     
     <button type="submit">Criar Cliente</button>
 </form>

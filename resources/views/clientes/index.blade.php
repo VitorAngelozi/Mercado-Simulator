@@ -8,3 +8,4 @@
         </div>
     @endforeach
 @endif
+<a href="/clientes/create">Criar Novo Cliente</a>
